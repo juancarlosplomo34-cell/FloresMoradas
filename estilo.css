@@ -1,0 +1,844 @@
+/* ============================= */
+/* CONFIGURACION GENERAL */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(20, 0, 35, 0.72),
+            rgba(10, 0, 20, 0.82)
+        ),
+        url("fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* CONTENEDOR PRINCIPAL */
+/* ============================= */
+
+.contenedor {
+    width: 100%;
+
+    max-width: 700px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* ============================= */
+/* FECHA */
+/* ============================= */
+
+.fecha {
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    color: #d8aaff;
+
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* TITULO */
+/* ============================= */
+
+h1 {
+    font-size: 55px;
+
+    text-shadow:
+        0 0 10px #c77dff,
+        0 0 30px #9d4edd;
+
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* SUBTITULO */
+/* ============================= */
+
+.subtitulo {
+    font-size: 19px;
+
+    color: #eadcff;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* ROSA PRINCIPAL */
+/* ============================= */
+
+.jardin {
+    margin: 15px 0 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+.jardin img {
+    width: 130px;
+
+    height: 130px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(200, 120, 255, 0.9)
+        );
+}
+
+
+/* ============================= */
+/* BOTON */
+/* ============================= */
+
+button {
+    padding: 16px 32px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9d4edd,
+            #c77dff
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px
+        rgba(199, 125, 255, 0.5);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px
+        rgba(199, 125, 255, 0.9);
+}
+
+
+/* ============================= */
+/* INDICACION */
+/* ============================= */
+
+.indicacion {
+    margin-top: 12px;
+
+    color: #d8b7ed;
+
+    font-size: 14px;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* ============================= */
+/* MENSAJE */
+/* ============================= */
+
+.mensaje {
+    margin-top: 35px;
+
+    padding: 40px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(90, 30, 120, 0.45),
+            rgba(20, 5, 35, 0.75)
+        );
+
+    border:
+        1px solid
+        rgba(220, 170, 255, 0.3);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 30px
+        rgba(155, 77, 255, 0.3),
+
+        inset 0 0 25px
+        rgba(255, 255, 255, 0.03);
+
+    line-height: 1.7;
+
+    animation:
+        cartaAparecer 1.2s ease;
+}
+
+
+.mensaje h2 {
+    color: #e0aaff;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px
+        rgba(224, 170, 255, 0.6);
+}
+
+
+.mensaje p {
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* CORAZON */
+/* ============================= */
+
+.corazon {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    animation:
+        latido 1.5s infinite;
+}
+
+
+/* ============================= */
+/* FRASE ESPECIAL */
+/* ============================= */
+
+.especial {
+    color: #e0aaff;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px
+        rgba(224, 170, 255, 0.5);
+}
+
+
+/* ============================= */
+/* FRASE FINAL */
+/* ============================= */
+
+.final {
+    color: #f0c9ff;
+
+    font-size: 21px;
+
+    margin-top: 25px;
+}
+
+
+/* ============================= */
+/* OCULTAR */
+/* ============================= */
+
+.oculto {
+    display: none;
+}
+
+
+/* ============================= */
+/* ESPIRAL */
+/* ============================= */
+
+.espiral {
+    position: fixed;
+
+    width: 650px;
+
+    height: 650px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    pointer-events: none;
+
+    animation:
+        girar 20s linear infinite;
+
+    z-index: 1;
+}
+
+
+/* ============================= */
+/* ROSAS DE LA ESPIRAL */
+/* ============================= */
+
+.espiral img {
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: contain;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform-origin: 0 0;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(200, 120, 255, 0.9)
+        );
+}
+
+
+/* ============================= */
+/* POSICIONES */
+/* ============================= */
+
+.espiral img:nth-child(1) {
+    transform:
+        rotate(0deg)
+        translateX(290px);
+}
+
+
+.espiral img:nth-child(2) {
+    transform:
+        rotate(45deg)
+        translateX(230px);
+}
+
+
+.espiral img:nth-child(3) {
+    transform:
+        rotate(90deg)
+        translateX(290px);
+}
+
+
+.espiral img:nth-child(4) {
+    transform:
+        rotate(135deg)
+        translateX(230px);
+}
+
+
+.espiral img:nth-child(5) {
+    transform:
+        rotate(180deg)
+        translateX(290px);
+}
+
+
+.espiral img:nth-child(6) {
+    transform:
+        rotate(225deg)
+        translateX(230px);
+}
+
+
+.espiral img:nth-child(7) {
+    transform:
+        rotate(270deg)
+        translateX(290px);
+}
+
+
+.espiral img:nth-child(8) {
+    transform:
+        rotate(315deg)
+        translateX(230px);
+}
+
+
+/* ============================= */
+/* GIRO */
+/* ============================= */
+
+@keyframes girar {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+}
+
+
+/* ============================= */
+/* ROSA CENTRAL */
+/* ============================= */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+/* ============================= */
+/* CARTA */
+/* ============================= */
+
+@keyframes cartaAparecer {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.95);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform:
+            translateY(-5px)
+            scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ============================= */
+/* CORAZON */
+/* ============================= */
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.2);
+    }
+}
+
+
+/* ================================================= */
+/* PETALOS */
+/* ================================================= */
+
+.petalos {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+.petalos span {
+    position: absolute;
+
+    top: -50px;
+
+    font-size: 18px;
+
+    opacity: 0.65;
+
+    animation:
+        caerPetalo linear infinite;
+}
+
+
+/* PETALO 1 */
+
+.petalos span:nth-child(1) {
+    left: 5%;
+
+    animation-duration: 9s;
+
+    animation-delay: 0s;
+}
+
+
+/* PETALO 2 */
+
+.petalos span:nth-child(2) {
+    left: 15%;
+
+    animation-duration: 12s;
+
+    animation-delay: 2s;
+
+    font-size: 14px;
+}
+
+
+/* PETALO 3 */
+
+.petalos span:nth-child(3) {
+    left: 25%;
+
+    animation-duration: 10s;
+
+    animation-delay: 4s;
+
+    font-size: 22px;
+}
+
+
+/* PETALO 4 */
+
+.petalos span:nth-child(4) {
+    left: 35%;
+
+    animation-duration: 14s;
+
+    animation-delay: 1s;
+
+    font-size: 16px;
+}
+
+
+/* PETALO 5 */
+
+.petalos span:nth-child(5) {
+    left: 45%;
+
+    animation-duration: 11s;
+
+    animation-delay: 5s;
+}
+
+
+/* PETALO 6 */
+
+.petalos span:nth-child(6) {
+    left: 55%;
+
+    animation-duration: 13s;
+
+    animation-delay: 3s;
+
+    font-size: 20px;
+}
+
+
+/* PETALO 7 */
+
+.petalos span:nth-child(7) {
+    left: 65%;
+
+    animation-duration: 10s;
+
+    animation-delay: 6s;
+}
+
+
+/* PETALO 8 */
+
+.petalos span:nth-child(8) {
+    left: 75%;
+
+    animation-duration: 15s;
+
+    animation-delay: 2s;
+
+    font-size: 15px;
+}
+
+
+/* PETALO 9 */
+
+.petalos span:nth-child(9) {
+    left: 85%;
+
+    animation-duration: 11s;
+
+    animation-delay: 4s;
+}
+
+
+/* PETALO 10 */
+
+.petalos span:nth-child(10) {
+    left: 95%;
+
+    animation-duration: 13s;
+
+    animation-delay: 1s;
+
+    font-size: 21px;
+}
+
+
+/* ============================= */
+/* ANIMACION PETALOS */
+/* ============================= */
+
+@keyframes caerPetalo {
+
+    0% {
+        transform:
+            translateY(-50px)
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+
+    10% {
+        opacity: 0.65;
+    }
+
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(40px)
+            rotate(180deg);
+    }
+
+
+    90% {
+        opacity: 0.5;
+    }
+
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(-50px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ============================= */
+/* CELULARES */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+
+    .jardin img {
+        width: 110px;
+
+        height: 110px;
+    }
+
+
+    .espiral {
+        width: 500px;
+
+        height: 500px;
+    }
+
+
+    .espiral img {
+        width: 55px;
+
+        height: 55px;
+    }
+
+
+    .espiral img:nth-child(1) {
+        transform:
+            rotate(0deg)
+            translateX(220px);
+    }
+
+
+    .espiral img:nth-child(2) {
+        transform:
+            rotate(45deg)
+            translateX(175px);
+    }
+
+
+    .espiral img:nth-child(3) {
+        transform:
+            rotate(90deg)
+            translateX(220px);
+    }
+
+
+    .espiral img:nth-child(4) {
+        transform:
+            rotate(135deg)
+            translateX(175px);
+    }
+
+
+    .espiral img:nth-child(5) {
+        transform:
+            rotate(180deg)
+            translateX(220px);
+    }
+
+
+    .espiral img:nth-child(6) {
+        transform:
+            rotate(225deg)
+            translateX(175px);
+    }
+
+
+    .espiral img:nth-child(7) {
+        transform:
+            rotate(270deg)
+            translateX(220px);
+    }
+
+
+    .espiral img:nth-child(8) {
+        transform:
+            rotate(315deg)
+            translateX(175px);
+    }
+
+
+    .mensaje {
+        padding: 30px 22px;
+    }
+
+}
+/* ============================= */
+/* RAMO FINAL */
+/* ============================= */
+
+.ramo-final {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    margin-top: 10px;
+}
+
+.ramo-final img {
+    width: 95px;
+    height: 95px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(200, 120, 255, 0.8)
+        );
+
+    transition: 0.3s;
+}
+
+
+.ramo-final img:nth-child(2) {
+    width: 120px;
+    height: 120px;
+}
